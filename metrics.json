@@ -1,0 +1,22 @@
+{
+    "accuracy": 0.9798657718120806,
+    "precision": 0.7393364928909952,
+    "recall": 0.9017341040462428,
+    "f1_score": 0.8125,
+    "confusion_matrix": [
+        [
+            3348,
+            55
+        ],
+        [
+            17,
+            156
+        ]
+    ],
+    "total_samples": 17880,
+    "train_samples": 14304,
+    "test_samples": 3576,
+    "real_postings": 17014,
+    "fake_postings": 866,
+    "model_name": "Logistic Regression (TF-IDF)"
+}
