@@ -34,12 +34,12 @@ import joblib
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 MODELS_DIR = os.path.join(BASE_DIR, "models")
-CSV_PATH_DEFAULT = os.path.join(BASE_DIR, "fake_job_postings.csv")
-CSV_PATH_DATA = os.path.join(DATA_DIR, "fake_job_postings.csv")
+CSV_PATH_DEFAULT = os.path.join(BASE_DIR, "fake_job_postings_sample.csv")
+CSV_PATH_DATA = os.path.join(DATA_DIR, "fake_job_postings_sample.csv")
 
 # Public dataset source URL (Raw Kaggle EMSCAD mirror on GitHub)
 DATASET_URL = (
-    "https://raw.githubusercontent.com/Cindyalifia/bangkit-project-1/master/fake_job_postings.csv"
+    "https://raw.githubusercontent.com/Cindyalifia/bangkit-project-1/master/fake_job_postings_sample.csv"
 )
 KAGGLE_SOURCE_URL = "https://www.kaggle.com/datasets/shivamb/real-or-fake-job-posting-prediction"
 
@@ -109,13 +109,13 @@ def ensure_dataset():
         print("=" * 65)
         print("1. Visit Kaggle's Real / Fake Job Posting Prediction dataset:")
         print(f"   {KAGGLE_SOURCE_URL}")
-        print("2. Download 'fake_job_postings.csv' (or unzip archive.zip).")
-        print(f"3. Place the 'fake_job_postings.csv' file inside this folder:")
+        print("2. Download 'fake_job_postings_sample.csv' (or unzip archive.zip).")
+        print(f"3. Place the 'fake_job_postings_sample.csv' file inside this folder:")
         print(f"   {BASE_DIR}")
         print("4. Re-run: py train.py")
         print("=" * 65 + "\n")
         raise FileNotFoundError(
-            f"Please download fake_job_postings.csv and place it at {CSV_PATH_DEFAULT}"
+            f"Please download fake_job_postings_sample.csv and place it at {CSV_PATH_DEFAULT}"
         )
 
 
